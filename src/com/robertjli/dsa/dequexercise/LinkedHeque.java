@@ -5,7 +5,8 @@ package com.robertjli.dsa.dequexercise;
  */
 public class LinkedHeque<T> implements Heque<T> {
 
-    Node root;
+    // This is public for testing purposes
+    public Node root;
 
     @Override
     public void pushFront(T element) {
@@ -41,9 +42,10 @@ public class LinkedHeque<T> implements Heque<T> {
         return null;
     }
 
-    private class Node {
-        T value;
-        Node next;
-        Node previous;
+    // This is public for testing purposes
+    public class Node {
+        public T value;
+        public Node next;
+        public Node previous;
     }
 }

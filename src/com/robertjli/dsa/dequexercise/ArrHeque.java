@@ -5,7 +5,15 @@ package com.robertjli.dsa.dequexercise;
  */
 public class ArrHeque<T> implements Heque<T> {
 
-    T[] array;
+    // This is public for testing purposes
+    public static int INITIAL_CAPACITY = 512;
+
+    // This is public for testing purposes
+    public T[] array;
+
+    public ArrHeque() {
+        array = (T[]) new Object[INITIAL_CAPACITY];
+    }
 
     @Override
     public void pushFront(T element) {
