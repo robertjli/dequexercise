@@ -6,7 +6,7 @@ package com.robertjli.dsa.dequexercise;
 public class LinkedHeque<T> implements Heque<T> {
 
     // This is public for testing purposes
-    public Node root;
+    public Node head;
 
     @Override
     public void pushFront(T element) {

@@ -11,7 +11,7 @@ public class LinkedHequeTest {
 
     private int size(LinkedHeque heque) {
         int size = 0;
-        LinkedHeque.Node current = heque.root;
+        LinkedHeque.Node current = heque.head;
         while (current != null) {
             ++size;
             current = current.next;
@@ -21,7 +21,7 @@ public class LinkedHequeTest {
 
     private <T> T[] toArray(LinkedHeque<T> heque) {
         T[] array = (T[]) new Object[size(heque)];
-        LinkedHeque.Node current = heque.root;
+        LinkedHeque.Node current = heque.head;
         for (int i = 0; i < array.length; ++i) {
             array[i] = (T) current.value;
         }
@@ -37,7 +37,7 @@ public class LinkedHequeTest {
     public void testConstructor() throws Exception {
         Assert.assertEquals(0, size(heque));
         Assert.assertArrayEquals(new Integer[]{}, toArray(heque));
-        Assert.assertNull(heque.root);
+        Assert.assertNull(heque.head);
     }
 
     @org.junit.Test
