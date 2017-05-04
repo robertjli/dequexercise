@@ -164,4 +164,12 @@ public class ArrHequeTest {
         Assert.assertEquals(3, size(heque));
     }
 
+    @org.junit.Test
+    public void testCapacity() throws Exception {
+        for (int i = 0; i < ArrHeque.INITIAL_CAPACITY * 10; ++i) {
+            heque.pushFront(i);
+        }
+        Assert.assertEquals((Integer) ArrHeque.INITIAL_CAPACITY * 10, size(heque));
+    }
+
 }
